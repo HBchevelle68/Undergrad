@@ -1,12 +1,3 @@
-/*
-Use FORK() to duplicate process[fifthproc] in a new address space
-then EXECVP() within child process to load program[ls] and input arguments
-
-
-After you run initial program make changes as comments below suggest to
-properly wait() for child to end and avoid ZOMBIE PROCESS!
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -47,17 +38,4 @@ int main()
   	else
     		printf("the child process exited abnormally\n");
   return 0;
-  
-
-/*replace return 0 with
-
-wait (&child_status);
-  if (WIFEXITED (child_status))
-    printf ("the child process exited normally, with exit code %d\n", WEXITSTATUS(child_status));
-  else
-    printf("the child process exited abnormally\n");
-  return 0;
-
-*/
-
 }

@@ -34,7 +34,8 @@ int main()
   shmdt(shared_memory);
 
 
-  //REATTACH SHARED MEMORY SEGMENT, AT A DIFFERENT ADDRESS!!!   //Specify Page Address in process Adress Space, 0x50000, to attach the shared memory
+  //REATTACH SHARED MEMORY SEGMENT, AT A DIFFERENT ADDRESS!!!   
+  //Specify Page Address in process Adress Space, 0x50000, to attach the shared memory
   shared_memory = (char*)shmat(segment_id,(void*)0x50000,0);
   printf("shared memory reattached at address %p\n", shared_memory);
 
@@ -45,7 +46,7 @@ int main()
   //DETACH SHARED MEMORY
   shmdt(shared_memory);
 
-  //DEALLOCATE THE SHARED MEMORY SEGMENT   ****(Don't Forget This Step!!!!)****
+  //DEALLOCATE THE SHARED MEMORY SEGMENT
   shmctl(segment_id, IPC_RMID, 0);
 
   return 0;

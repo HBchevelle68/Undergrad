@@ -5,6 +5,8 @@
 
 There are multiple people on github who have copied my code and claimed they authored it without giving proper credit. So I am gonna go ahead and call them out:
 
-@ToxicEnvelope
-@mohamed4hazem4eprahim
+@ToxicEnvelope (https://github.com/ToxicEnvelope)
+
+@mohamed4hazem4eprahim (https://github.com/mohamed4hazem4eprahim)
+
 
